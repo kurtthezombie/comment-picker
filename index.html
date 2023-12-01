@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Comment Picker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  </head>
+  <body class="position-relative">
+    <section class="min-vh-100 d-flex align-items-center justify-content-center">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-10 background-link">
+            <label for="" class="form-label h1 mb-3">Enter Link from <span class="text-danger">YouTube</span></label>
+            <input type="text" class="form-control border-bottom border-2 border-danger rounded-0 border-0" id="LinkInput" placeholder="example: https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+            <div class="row align-items-center justify-content-between mt-3">
+              <div class="text-md-start">
+                <h5 class="text-dark"><span id="CommentCount">0</span> Comments</h5>
+              </div>
+              <div class="text-md-start mt-2">
+                <button class="btn btn-primary btn-danger" id="pickComment">Pick Comments</button>
+                <button class="btn btn-secondary d-none" id="pickAnother">Pick Another Comment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center mt-3">
+          <div id="Enter" class="col-md-10 background-link py-5">
+            <h5 class="text-center">No link entered yet.</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--MODAL-->
+    <!--INCORRECT LINK-->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+      <div class="toast" id="wrongLink">
+        <div class="toast-header">
+          <i class="bi bi-x-square-fill text-danger"></i>
+          <strong class="me-auto ms-2">Incorrect</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body bg-danger text-white">Incorrect Video Link!</div>
+      </div>
+    </div>
+
+    <!--CORRECT LINK-->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+      <div class="toast" id="correctLink">
+        <div class="toast-header">
+          <i class="bi bi-x-square-fill text-success"></i>
+          <strong class="me-auto ms-2">Correct</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body bg-success text-white">Valid link. Data collection in progress...</div>
+      </div>
+    </div>
+
+    <!--SCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
